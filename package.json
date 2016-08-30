@@ -1,7 +1,7 @@
 {
-  "name": "icp",
-  "version": "1.0.0",
-  "description": "",
+  "name": "s-recure",
+  "version": "0.0.1",
+  "description": "Simple, extensible parser for the iCalendar spec",
   "main": "index.js",
   "scripts": {
     "test": "ts-node ./node_modules/.bin/jasmine",
@@ -9,10 +9,17 @@
     "prebuild": "npm run clean",
     "build": "npm run build:cjs && npm run build:esm",
     "build:esm": "tsc -p tsconfig.esm.json",
-    "build:cjs": "tsc -p tsconfig.cjs.json"
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "postbuild": "npm run prepare",
+    "prepare": "npm run prepare:ts && npm run prepare:package",
+    "prepare:ts": "cp -R ./src ./release",
+    "prepare:package": "cp ./{package.json,README.md,LICENSE} ./release"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mike Ryan",
+  "license": "MIT",
+  "peerDependencies": {
+    "moment": "^2.14.1"
+  },
   "devDependencies": {
     "@types/jasmine": "^2.2.33",
     "cpy-cli": "^1.0.1",

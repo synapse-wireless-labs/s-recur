@@ -23,8 +23,3 @@ export const serialize = compose(serializeContentLines, contentLinesHandler.seri
 
 export { Days } from './schema/tokens';
 export { Frequencies } from './recurrences/definitions/freq';
-
-// const demo = `RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
-// EXDATE:20141208T134000`;
-
-// console.log(parse(demo));
