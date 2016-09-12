@@ -4,6 +4,7 @@ import { countDefinition, CountValue } from './definitions/count';
 import { dtstartDefinition, DTStartValue } from './definitions/dtstart';
 import { freqDefinition, FrequencyValue } from './definitions/freq';
 import { untilDefinition, UntilValue } from './definitions/until';
+import { intervalDefinition, IntervalValue } from './definitions/interval';
 
 export interface Recurrences {
   byDay?: ByDayValue;
@@ -11,6 +12,7 @@ export interface Recurrences {
   dtstart?: DTStartValue;
   frequency?: FrequencyValue;
   until?: UntilValue;
+  interval?: IntervalValue;
 }
 
 export const recurrencesHandler = createDictionaryHandler<Recurrences>([
@@ -18,5 +20,6 @@ export const recurrencesHandler = createDictionaryHandler<Recurrences>([
   countDefinition,
   dtstartDefinition,
   freqDefinition,
-  untilDefinition
+  untilDefinition,
+  intervalDefinition
 ]);
