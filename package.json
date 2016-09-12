@@ -1,6 +1,6 @@
 {
   "name": "s-recur",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple, extensible parser for the iCalendar spec",
   "main": "index.js",
   "scripts": {
