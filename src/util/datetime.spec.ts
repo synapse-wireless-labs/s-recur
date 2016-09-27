@@ -15,7 +15,7 @@ describe('datetime Utility', () => {
   });
 
   it('should correctly serialize a moment object', () => {
-    const time = moment({
+    const time = moment.utc({
       year: 2015,
       month: 1,
       date: 20,

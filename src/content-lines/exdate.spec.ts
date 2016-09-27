@@ -9,9 +9,9 @@ describe('exdate Definition', () => {
     });
 
     it('should serialize an array of moment objects', () => {
-      const first = moment();
-      const second = moment().add(1, 'hour');
-      const third = moment().add(1, 'year');
+      const first = moment.utc();
+      const second = moment.utc().add(1, 'hour');
+      const third = moment.utc().add(1, 'year');
 
       const serialized = exdateDefinition.serialize([
         first,
@@ -34,9 +34,9 @@ describe('exdate Definition', () => {
 
     it('should parse an exdate array', () => {
       const set = [
-        moment(),
-        moment().add(2, 'days'),
-        moment().add(3, 'hours')
+        moment.utc(),
+        moment.utc().add(2, 'days'),
+        moment.utc().add(3, 'hours')
       ];
       const exdate = set.map(serializeDateTime).join(',');
 
