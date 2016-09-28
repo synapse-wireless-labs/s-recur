@@ -25,6 +25,6 @@ describe('datetime Utility', () => {
     });
     const serialized = serializeDateTime(time);
 
-    expect(serialized).toBe('20150220T183007');
+    expect(serialized).toBe('20150220T183007Z');
   });
 });

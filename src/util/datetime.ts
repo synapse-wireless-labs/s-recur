@@ -7,5 +7,5 @@ export function parseDateTime(input: string): moment.Moment {
 }
 
 export function serializeDateTime(input: moment.Moment): string {
-  return input.format(RFC_2445_DATETIME_FORMAT).replace(' ', 'T');
+  return input.format(RFC_2445_DATETIME_FORMAT).replace(' ', 'T') + 'Z';
 }
